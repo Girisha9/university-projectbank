@@ -244,7 +244,7 @@ app.get("/searchresult",function(req,res)
 // await Login.insertMany([data]);
 // res.render("adminlogged");
 // })
-app.listen(3000,function()
+app.listen(10000,function()
 {
     console.log("server listening");
 });
