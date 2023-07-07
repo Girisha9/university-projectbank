@@ -331,10 +331,13 @@ function GetAllDataOnce() {
            onValue(dbRef,(snapshot) => {
             snapshot.forEach(childSnapshot => {
             var name = childSnapshot.val().ProjectName;
+            var sub = childSnapshot.val().Subject;
             var temp = name.split('.');
             var fname = temp.slice(0,-1).join('.');
-                console.log(fname);
-                countries.push(fname);
+                if(sub == "APPD"){
+                    console.log(fname);
+                    countries.push(fname);
+                }
             });
            })
 }
