@@ -317,7 +317,17 @@ $(document).ready(function() {
         function SignOut(){
             sessionStorage.removeItem('pro');
             var loc = window.location.href;
-            window.location.href = "http://localhost:3000/search_aiml";
+            window.location.href = "https://university-prohect-bankkk.onrender.com/search_aiml";
+        }
+      function SignOut1(){
+            sessionStorage.removeItem('pro');
+            var loc = window.location.href;
+            window.location.href = "https://university-prohect-bankkk.onrender.com/search_appd";
+        }
+      function SignOut2(){
+            sessionStorage.removeItem('pro');
+            var loc = window.location.href;
+            window.location.href = "https://university-prohect-bankkk.onrender.com/search_webdev";
         }
         window.onload=()=>{
             getProject();
@@ -347,7 +357,13 @@ $(document).ready(function() {
                 userlinka4.href="#";
                 
                 signoutlink.innerText="Back";
+              if(currentuser.Subject == "ML"){
                 signoutlinka.href="javascript:SignOut()";
+              }else if(currentuser.Subject == "APPD"){
+                signoutlinka.href="javascript:SignOut1()";
+              }else if(currentuser.Subject == "WEBD"){
+                signoutlinka.href="javascript:SignOut2()";
+              }
             }
             
         }
